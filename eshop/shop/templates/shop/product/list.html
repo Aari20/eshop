@@ -1,0 +1,71 @@
+{% extends 'shop/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+    {% if p_list.category %} {{ category.name }}{% else %} {% trans 'Products' %} {% endif %}
+{% endblock %}
+{% block navbar %}
+    <header class="head1">
+
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <img class="logo" src=" {% static 'img/logo.png' %}">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'shop:product_list' %}">{% trans 'Home'} <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    {% for c in categories %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ c.get_absolute_url }} ">{{ c.name }}</a>
+                        </li>
+                    {% endfor %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">{% trans 'Contact' %}</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+{% endblock %}
+
+{% block content %}
+    <div id="sidebar">
+        <h3>{% trans 'Categories' %}</h3>
+        <ul>
+            <li {% if not category %} class="selected"{% endif %}>
+                <a href="{% url 'shop:product_list' %}">All</a>
+            </li>
+            {% for c in categories %}
+                <li {% if category.slug == c.slug %} class='selected'{% endif %}>
+                    <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="card-deck">
+        {% for product in products|slice:12 %}
+
+            <div class=" col-sm-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="
+                            {% if product.image %}{{ product.image.url }}{% else %}{% static 'img/No_image_available.svg' %}{% endif %}"
+                         class="card-img-top" alt="{{ product.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">{% trans 'Price' %}: {{ product.price }} €</p>
+                        <a href="{{ product.get_absolute_url }}" class="btn btn-primary">{% trans 'Add to cart' %}</a>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}

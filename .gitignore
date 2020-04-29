@@ -1,0 +1,7 @@
+*.pyc
+.idea/
+local_settings.py
+venv/
+eshop/*/migrations/*
+!eshop/*/migrations/__init__.py
+db.sqlite3

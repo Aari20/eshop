@@ -1,0 +1,181 @@
+html {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    max-width: 1299px;
+    margin: auto
+}
+
+.head1 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2425aa;
+
+}
+
+.logo {
+    max-height:80px;
+}
+
+button {
+    color: #2425aa;
+}
+
+.navbar .navbar-nav {
+    margin-left: auto;
+}
+
+.nav1 {
+    max-width: 1299px;
+    margin: auto;
+
+}
+
+.head1 .nav-link {
+    text-align: center;
+    padding-bottom: 30px;
+    color: #2425aa;
+}
+
+.cart {
+    border-bottom: 1px solid #2425aa;
+
+}
+.card-deck img {
+    max-height: 360px ;
+}
+
+.product-detail img{
+    max-height: 250px;
+
+}
+
+.cart img{
+    height: 150px;
+    max-width: 100px;
+    object-fit:contain ;
+}
+
+
+
+.cards {
+    background-color: white;
+    box-shadow: 1px 1px rgba(24, 39, 166, 0.10);
+}
+
+.cards:hover {
+    background-color: white;
+    box-shadow: 3px 3px 3px rgba(24, 39, 166, 0.15);
+}
+
+.cards i, .fa-cog {
+    font-size: 70px;
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+    font-size: calc(40px + (50 - 40) * ((100vw - 300px) / (1600 - 300)));
+    color: rgba(78, 51, 180, 0.76);
+}
+
+.cards h3 {
+    color: rgba(78, 51, 180, 0.76);
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+    font-size: 20px;
+    font-size: calc(15px + (30 - 15) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.faq {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.accordion {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.accordion .card {
+    border-radius: 20px;
+}
+
+.accordion .btn-link {
+    color: rgba(78, 51, 180, 0.76);
+}
+
+footer {
+    background-color: white;
+    padding: 50px 0;
+    margin-top: 50px;
+
+
+}
+
+.foot-nav {
+    margin: auto;
+    text-align: center;
+}
+
+.foot-nav li {
+    display: inline;
+}
+
+footer i {
+    font-size: 25px;
+}
+
+footer a {
+    color: grey;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+footer a:hover {
+    color: grey;
+    font-size: 15px;
+}
+
+.main-cont {
+    max-width: 1099px;
+    margin: auto;
+}
+
+.breadcrumb {
+    background-color: transparent;
+}
+
+.article {
+    padding: 60px 120px;
+
+}
+
+.desc {
+    color: grey;
+    font-weight: lighter;
+}
+
+.container h4 {
+    color: rgba(78, 51, 180, 0.76);
+}
+
+.last-upd {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+div.img-a {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin:40px auto 40px
+}
+
+div.caption {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.code {
+    font-family: "Courier New", Courier, monospace border;
+    border: 1px solid lightgrey;
+    background-color: rgba(0,0,0,0.02);
+    border-radius: 10px;
+
+}
