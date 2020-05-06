@@ -2,7 +2,6 @@ from django.db import models
 
 # Create your models here.
 from django.urls import reverse
-from parler.models import TranslatableModel, TranslatedFields
 
 
 class SizeShoes(models.Model):
@@ -71,7 +70,9 @@ class Product(models.Model):
 
     class Meta:
         ordering = ('created',)
-        #index_together = (('id', 'slug'),)
+        verbose_name = 'product'
+        verbose_name_plural = 'products'
+        index_together = (('id', 'slug'),)
 
     def __str__(self):
         return self.name

@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'payment',
     'coupons',
     'rosetta',
-    'parler',
 
 ]
 
@@ -158,18 +157,9 @@ LOCALE_PATHS = (
 os.path.join(BASE_DIR, 'locale/'),
 )
 
-PARLER_LANGUAGES = {
-    None: (
-        {'code': 'en',},
-        {'code': 'ro',},
-        ),
-    'default': {
-        'fallback': 'en',
-        'hide_untranslated': False,
-        }
-    }
-
-
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 1
 
 
 
